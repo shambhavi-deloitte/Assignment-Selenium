@@ -1,5 +1,6 @@
 package AutomationPages;
 
+import ExtentReport.extentReport;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
@@ -7,7 +8,7 @@ import org.testng.annotations.BeforeTest;
 
 import java.time.Duration;
 
-public class StartApplication {
+public class StartApplication extends extentReport {
     public WebDriver driver;
     @BeforeTest
     public void setup()  {
@@ -18,9 +19,9 @@ public class StartApplication {
         driver.get("https://weathershopper.pythonanywhere.com/");
 
     }
-    @AfterTest
+ /* @AfterTest
     public void AppQuit(){
 
-        driver.close();
-    }
+       driver.close();
+   } */
 }
